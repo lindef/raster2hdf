@@ -136,9 +136,9 @@ def main():
     parser.add_argument('--fn',required=True, help='name of the SAFE')
     args = parser.parse_args()
     print args,args.fn
-    path = '/datadisk/data'   # please adapt this according your hdf directory
+    path = '/datadisk/data/'   # please adapt this according your hdf directory
     print path
-    os.chdir(args.fn+'/GRANULE')
+    os.chdir(path+args.fn+'/GRANULE')
     dirs=os.listdir('.')
     selector=0
     for dir in dirs:
@@ -156,7 +156,7 @@ def main():
             gen_data(f,hd5file,band)
             print time.clock()-t0, 's'
         hd5file.close()
-        os.chdir('../../')
+        os.chdir('../..')   
 
 if __name__ == "__main__":
     main()
