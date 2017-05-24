@@ -21,7 +21,7 @@ def open_hdf(filename,path):
         defines the band structure according to sentinel 2
     """
     hd5file=tb.open_file(path+'/hdf/'+filename,mode='w')
-    hd5file.create_group("/",'B01','Band B01 60m res 20nm Aerosol')
+    hd5file.create_group("/",'B01','Band B01 60m res 443nm Aerosol')
     hd5file.create_group("/",'B02','Band B02 10m res 490nm Blue')
     hd5file.create_group("/",'B03','Band B03 10m res 560nm Green')
     hd5file.create_group("/",'B04','Band B04 10m res 665nm Red')
@@ -30,10 +30,10 @@ def open_hdf(filename,path):
     hd5file.create_group("/",'B07','Band B07 20m res 783nm Vegetation')
     hd5file.create_group("/",'B08','Band B08 10m res 842nm NIR')
     hd5file.create_group("/",'B8A','Band B8A 20m res 865nm Vegetation')
-    hd5file.create_group("/",'B09','Band B09 60m res 954nm vapour')
+    hd5file.create_group("/",'B09','Band B09 60m res 954nm Vapour')
     hd5file.create_group("/",'B10','Band B10 60m res 1375nm Cirrus')
-    hd5file.create_group("/",'B11','Band B11 20m res 1610nm Snow/ice/cloud')
-    hd5file.create_group("/",'B12','Band B11 20m res 2190nm Snow/ice/cloud')
+    hd5file.create_group("/",'B11','Band B11 20m res 1610nm Snow/Ice/Cloud')
+    hd5file.create_group("/",'B12','Band B11 20m res 2190nm Snow/Ice/Cloud')
     return hd5file
 
 def gen_attributes(hdfile,filename):

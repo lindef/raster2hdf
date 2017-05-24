@@ -5,8 +5,8 @@ https://sentinels.copernicus.eu/web/sentinel/sentinel-data-access
 The Sentinel2 data consists of meta data (XML) and image data (JPEG2000).
 
 The image data:
-    Band B01 60m res 20nm Aerosol
-    B02','Band B02 10m res 490nm Blue
+    Band B01 60m res 443nm Aerosol
+    Band B02 10m res 490nm Blue
     Band B03 10m res 560nm Green
     Band B04 10m res 665nm Red
     Band B05 20m res 705nm Vegetation
@@ -14,10 +14,10 @@ The image data:
     Band B07 20m res 783nm Vegetation
     Band B08 10m res 842nm NIR
     Band B8A 20m res 865nm Vegetation
-    Band B09 60m res 954nm vapour
+    Band B09 60m res 954nm Vapour
     Band B10 60m res 1375nm Cirrus
-    Band B11 20m res 1610nm Snow/ice/cloud
-    Band B11 20m res 2190nm Snow/ice/cloud
+    Band B11 20m res 1610nm Snow/Ice/Cloud
+    Band B12 20m res 2190nm Snow/Ice/Cloud
     
 together with the meta data are stored in an compressed HDF5
 (https://support.hdfgroup.org/HDF5/). The Python script "sentinel2hdf5.py"
